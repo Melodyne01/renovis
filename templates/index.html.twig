@@ -1,20 +1,359 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello Controller!{% endblock %}
+{% block title %}Renovis - 
+Entreprise générale
+du bâtiment{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main>
+    <div class="uk-height-large" uk-height-viewport="expand: true">
+        <div class="uk-child-width-1-1@s" uk-grid>
+            <div class="uk-background-cover uk-height-custom-large uk-flex uk-flex-center uk-flex-middle header" uk-parallax="bgy: -200" style="background-image: url(images/bg.jpg);">
+                <div class="uk-position-top">
+                    <nav class="uk-navbar-container uk-navbar-transparent uk-visible@s">
+                        <div class="uk-container">
+                            <div uk-navbar> 
+                                <div class="uk-navbar-center">
+                                    <div class="uk-navbar-center-left">
+                                        <ul class="uk-navbar-nav ">
+                                            <li><a href="#about">A Propos</a></li>
+                                            <li><a href="#services">Services</a></li>
+                                        </ul>
+                                    </div>
+                                    <a class="uk-navbar-item uk-logo" href="{{path('home')}}"><img src="{{ asset('images/logoBlanc.png') }}" width="75px" alt="">
+                                    </a>
+                                    <div class="uk-navbar-center-right">
+                                        <ul class="uk-navbar-nav">
+                                            <li><a href="#portfolio">Portfolio</a></li>
+                                            <li><a href="#contact">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <nav class="uk-navbar-container uk-navbar-transparent uk-hidden@s">
+                        <div class="uk-container uk-navbar-transparent">
+                            <div uk-navbar>
+                                <div class="uk-navbar-left">
+                                    <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#about">A Propos</a></li>
+                                            <li><a href="#services">Services</a></li>
+                                            <li><a href="#portfolio">Portfolio</a></li>
+                                            <li><a href="#contact">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="uk-navbar-center">
+                                    <a class="uk-navbar-item uk-logo" href="#"><img loading="lazy" src="{{ asset('images/logoBlanc.png') }}" width="75px" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="uk-container">
+                    <div class="uk-card uk-card-transparent uk-card-large uk-card-body uk-width-1-2@m uk-width-1-1@s" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
+                        <h1>WE DESIGN FOR YOR SPACE</h1>
+                        <p class="uk-padding-large subtitle uk-text-left uk-padding-remove-left uk-padding-remove-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#" class="uk-button uk-text-center uk-width-1-2@m uk-width-1-1@s uk-border-rounded uk-align-left uk-button-primary">Nous découvrir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-background-fixed uk-position-relative uk-section uk-section-default uk-overflow-hidden about" id="about">
+            <div class="uk-container uk-text-left">
+                <div class="uk-flex-middle" uk-grid>
+                    <div class="uk-width-2-3@m uk-position-z-index" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
+                        <h2>A propos</h2>
+                        <div class="subtitle">
+                            WE MAKE COMFORT IN YOUR HOME
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolorem nemo deleniti, quasi sit molestias doloribus, eligendi temporibus dicta, excepturi error distinctio facere. Quod magnam asperiores, sit ipsa nemo porro aliquam in a numquam amet ex est cumque quibusdam delectus qui voluptates facere iure alias nulla quia laudantium reprehenderit ratione?
+                        </div>
+                        <div class="button">
+                            <a href="#" class="uk-button uk-width-1-3@m uk-width-1-2 uk-border-rounded uk-align-left uk-button-primary">Nous découvrir</a>
+                        </div>
+                    </div>
+                    <div class="uk-position-absolute" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
+                        <img class="sink" src="{{asset('images/bg3.png')}}" width="1000px" alt="">
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="uk-background-cover uk-background-fixed uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle whyus" style="background-image: url(images/bg6.jpg);">
+            <div class="overlay">
+                <div class="uk-position-center">
+                    <div class="uk-container">
+                        <h2>Pourquoi nous ?</h2>
+                        <div class="uk-grid-match uk-child-width-1-3@s" uk-grid>
+                            <div>
+                                <span uk-icon="user"></span>
+                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                            <div>
+                                <span uk-icon="commenting"></span>
+                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                            <div>
+                                <span uk-icon="paint-bucket"></span>
+                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-background-fixed uk-section uk-section-default services uk-text-justify" id="services">
+            <div class="uk-container">
+                <div uk-grid>
+                    <div class="uk-width-2-3@m" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
+                        <h2>Services</h2>
+                        <div class="subtitle uk-text-left ">
+                            WE MAKE COMFORT IN YOUR HOME
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolorem nemo deleniti, quasi sit molestias doloribus, eligendi temporibus dicta, excepturi error distinctio facere. Quod magnam asperiores, sit ipsa nemo porro aliquam in a numquam amet ex est cumque quibusdam delectus qui voluptates facere iure alias nulla quia laudantium reprehenderit ratione?
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-width-1-1" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
+                        <div class="uk-flex-middle" uk-grid>
+                            <div class="uk-width-2-3@m uk-width-1-2">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            </div>
+                            <div class="uk-width-1-3@m uk-width-1-2 uk-flex-first">
+                                <img src="images/pencil.png" width="90" alt="Image">
+                            </div>
+                            <div class="uk-width-2-3@m uk-width-1-2 uk-flex-first">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            </div>
+                            <div class="uk-width-1-3@m uk-width-1-2">
+                                <img src="images/mouse.svg" width="90" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-text-center uk-flex uk-flex-column uk-flex-middle uk-flex-row@m" uk-grid>
+                    <div class="uk-width-1-3@m uk-width-2-3@s">
+                        <div class="uk-inline" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
+                            <img loading="lazy" src="{{ asset('images/bg9.jpg') }}" width="100%" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                <p>Salle de bain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-width-2-3@s">
+                        <div class="uk-inline" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false">
+                            <img loading="lazy" src="{{ asset('images/bg9.jpg') }}" width="100%" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                <p>Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-width-2-3@s">
+                        <div class="uk-inline" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
+                            <img loading="lazy" src="{{ asset('images/bg9.jpg') }}" width="100%" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                <p>Terrasse</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="uk-heading-line uk-text-center uk-margin-custom-large" id="portfolio"><span>Portfolio</span></h1>
+                <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: pack" uk-lightbox="animation: slide">
+                    <a class="uk-inline" href="images/bg10.jpg">
+                        <div>
+                            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle"><img src="{{asset('images/bg10.jpg')}}" height="250px" alt="" srcset=""></div>
+                        </div>
+                    </a>
+                    <a class="uk-inline" href="images/bg9.jpg">
+                        <div>
+                            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle"><img src="{{asset('images/bg9.jpg')}}" height="350px" alt="" srcset=""></div>
+                        </div>
+                    </a>
+                    <a class="uk-inline" href="images/bg8.jpg">
+                        <div>
+                            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle"><img src="{{asset('images/bg8.jpg')}}" height="350px" alt="" srcset=""></div>
+                        </div>
+                    </a>
+                    <a class="uk-inline" href="images/bg10.jpg">
+                        <div>
+                            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle"><img src="{{asset('images/bg10.jpg')}}" height="250px" alt="" srcset=""></div>
+                        </div>
+                    </a>
+                    <a class="uk-inline" href="images/bg9.jpg">
+                        <div>
+                            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle"><img src="{{asset('images/bg9.jpg')}}" height="350px" alt="" srcset=""></div>
+                        </div>
+                    </a>
+                    <a class="uk-inline" href="images/bg8.jpg">
+                        <div>
+                            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle"><img src="{{asset('images/bg8.jpg')}}" height="350px" alt="" srcset=""></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="uk-margin-top button">
+                    <a href="#" class="uk-align-center uk-button uk-width-1-4 uk-border-rounded uk-button-primary">plus</a>
+                </div>
+            </div>      
+        </div>
+        <div class="uk-slider-container-offset" uk-slider>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/tangu/symfonyProjects/renovis/src/Controller/Controller.php</code></li>
-        <li>Your template at <code>C:/Users/tangu/symfonyProjects/renovis/templates//index.html.twig</code></li>
-    </ul>
-</div>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+        
+                <div class="uk-slider-items uk-child-width-1-1@s uk-grid uk-text-center">
+                    <div>
+                        <blockquote cite="#">
+                            <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.</p>
+                            <footer>Someone famous in <cite><a href="#">Source Title</a></cite></footer>
+                        </blockquote>
+                    </div>
+                    <div>
+                        <blockquote cite="#">
+                            <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.</p>
+                            <footer>Someone famous in <cite><a href="#">Source Title</a></cite></footer>
+                        </blockquote>
+                    </div>
+                    <div>
+                        <blockquote cite="#">
+                            <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.</p>
+                            <footer>Someone famous in <cite><a href="#">Source Title</a></cite></footer>
+                        </blockquote>
+                    </div>
+                    <div>
+                        <blockquote cite="#">
+                            <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.</p>
+                            <footer>Someone famous in <cite><a href="#">Source Title</a></cite></footer>
+                        </blockquote>
+                    </div>
+                    <div>
+                        <blockquote cite="#">
+                            <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.</p>
+                            <footer>Someone famous in <cite><a href="#">Source Title</a></cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>     
+            </div>      
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        </div>
+        
+        <div class="uk-section uk-section-default contact" id="contact">
+            <div class="uk-container">
+                <h2>CONTACT</h2>
+                <form class="uk-grid-small" uk-grid>
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-select">Prénom</label>
+                        <input class="uk-input" type="text" placeholder="" aria-label="50">
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-select">Nom</label>
+                        <input class="uk-input" type="text" placeholder="" aria-label="50">
+                    </div>
+                    <div class="uk-width-1-1">
+                        <label class="uk-form-label" for="form-stacked-select">Email</label>
+                        <input class="uk-input" type="text" placeholder="" aria-label="50">
+                    </div>
+                    <div class="uk-width-1-1">
+                        <label class="uk-form-label" for="form-stacked-select">Téléphone</label>
+                        <input class="uk-input" type="text" placeholder="" aria-label="50">
+                    </div>
+                    <div class="uk-width-1-1">
+                        <label class="uk-form-label" for="form-stacked-select">Message</label>
+                        <textarea class="uk-textarea uk-resize-vertical" rows="5" placeholder="" aria-label="Textarea"></textarea>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="uk-section">
+            <div class="uk-container uk-text-justify" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false">
+                <ul uk-accordion="multiple: true">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href>What is It's Place?</a>
+                        <div class="uk-accordion-content">
+                            <p>We are a digital agency offering a complete range of services to enhance the online presence of businesses. From website creation to social media management, we are here to meet your digital needs.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href>Why choose us?</a>
+                        <div class="uk-accordion-content">
+                            <p>Experience exceptional digital collaboration with It's Place, your preferred partner for a dynamic and effective online presence. Our agency stands out with innovative creativity, multidimensional digital expertise, total commitment to your success, measurable tangible results, and personalized solutions tailored to your unique needs. Choose It's Place for a digital transformation that exceeds expectations. Your success is our priority.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href>What services do we offer as a digital agency?</a>
+                        <div class="uk-accordion-content">
+                            <p>We offer a variety of services, including website creation, social media management, SEO optimization, graphic design, online reputation management, and performance analysis.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href>How do we manage the online reputation of our clients?</a>
+                        <div class="uk-accordion-content">
+                            <p>We actively monitor your online reputation, respond to comments, and implement strategies to build customer trust and protect your brand image.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href>What does creating a visual identity with us include?</a>
+                        <div class="uk-accordion-content">
+                            <p>We work closely with you to create a distinctive visual identity that reflects the essence of your brand and ensures consistent communication across all channels.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href>What are our rates?</a>
+                        <div class="uk-accordion-content">
+                            <p>Our rates vary depending on the services you choose and the scope of your project. Our packages are indicative but can be adapted according to needs. Contact us for a personalized quote.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href>How can you start working with us?</a>
+                        <div class="uk-accordion-content">
+                            <p>To start working with us, contact our team through our various networks and soon via email to discuss your needs and plan an initial consultation. We look forward to helping you achieve your digital goals.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-section uk-section-primary uk-light">
+            <div class="uk-container">
+                <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                    <div>
+                        <p>TVA : BE0767 804 191</p>
+                    </div>
+                    <div>
+                        <p>RENOVIS srl
+                            <br>
+                            <br>
+                            Ninoofsesteenweg 230
+                            <br>
+                            <br>
+                            1700 Dilbeek
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span uk-icon="receiver"></span> 0493 41 82 54
+                            <br>
+                            <br>
+                            <span uk-icon="mail"></span> info@renovis.be
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
+                    <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
+                    <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="whatsapp"></a>
+                    <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin"></a>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</main>
 {% endblock %}
